@@ -1,0 +1,4 @@
+module:
+  $ref: "./module.yaml"
+error:
+  $ref: "./error.yaml"

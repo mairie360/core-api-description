@@ -1,0 +1,7 @@
+name: module_id
+in: path
+required: true
+description: The module ID
+schema:
+  type: integer
+  format: int32

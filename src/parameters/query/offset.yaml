@@ -1,0 +1,7 @@
+name: offset
+in: query
+description: The offset of the items to return
+required: false
+schema:
+  type: integer
+  format: int32

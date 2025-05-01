@@ -1,0 +1,29 @@
+openapi: 3.1.1
+info:
+  version: 1.0.0
+  title: The Core API description
+  description: Multi-file boilerplate for OpenAPI Specification.
+  contact:
+    name: Clément Antoine XAVIER
+    url: http://www.example.com/support
+    email: support@example.com
+  license: 
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: http://petstore.swagger.io/v1
+tags:
+  - name: modules
+    description: Module operations
+paths:
+  /pets:
+    $ref: "./resources/modules.yaml"
+  /pets/{petId}:
+    $ref: "./resources/module.yaml"
+components:
+  parameters:
+    $ref: "./parameters/_index.yaml"
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  responses:
+    $ref: "./responses/_index.yaml"
