@@ -28,14 +28,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: "../schemas/create_user.yaml"
+          $ref: ../schemas/update_user.yaml
   responses:
     "200":
       description: An user object
       content:
         application/json:
           schema:
-            $ref: "../schemas/module.yaml"
+            $ref: "../schemas/user.yaml"
 
 delete:
   summary: Delete an user
