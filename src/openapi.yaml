@@ -2,24 +2,35 @@ openapi: 3.1.1
 info:
   version: 1.0.0
   title: The Core API description
-  description: Multi-file boilerplate for OpenAPI Specification.
+  description: The Core API description of the Mairie360 Core API
   contact:
     name: Clément Antoine XAVIER
-    url: http://www.example.com/support
-    email: support@example.com
+    url: https://github.com/marie360/core-api-description
+    email: clement-antoine.xavier@epitech.eu
   license: 
     name: MIT License
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: http://petstore.swagger.io/v1
+  - url: http://api.development.mairie360.fr
+    description: Development server
 tags:
-  - name: modules
+  - name: Modules
     description: Module operations
 paths:
-  /pets:
+  /modules:
     $ref: "./resources/modules.yaml"
-  /pets/{petId}:
+  /modules/{module_id}:
     $ref: "./resources/module.yaml"
+  /users:
+    $ref: "./resources/users.yaml"
+  /users/{user_id}:
+    $ref: "./resources/user.yaml"
+  /users/{user_id}/sessions:
+    $ref: "./resources/sessions.yaml"
+  /users/{user_id}/sessions/{session_id}:
+    $ref: "./resources/session.yaml"
+  /users/{user_id}/password:
+    $ref: "./resources/password.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"

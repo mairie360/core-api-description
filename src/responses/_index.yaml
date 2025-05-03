@@ -1,4 +1,6 @@
-UnexpectedError:
-  $ref: unexpected_error.yaml
-NullResponse:
-  $ref: "null_response.yaml"
+BadRequest:
+  $ref: "./bad_request.yaml"
+Conflict:
+  $ref: "./conflict.yaml"
+NotFound:
+  $ref: "./not_found.yaml"

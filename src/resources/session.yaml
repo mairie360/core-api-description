@@ -1,0 +1,29 @@
+get:
+  summary: Retrieve a session
+  operationId: retrieve_session_by_id
+  description: Retrieve an session by ID
+  tags:
+    - Sessions
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+    - $ref: "../parameters/path/session_id.yaml"
+  responses:
+    "200":
+      description: An session object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"
+
+delete:
+  summary: Delete a session
+  operationId: delete_session_by_id
+  description: Delete an session by ID
+  tags:
+    - Sessions
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+    - $ref: "../parameters/path/session_id.yaml"
+  responses:
+    "204":
+      description: No content

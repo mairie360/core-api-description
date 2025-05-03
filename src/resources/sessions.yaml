@@ -1,0 +1,43 @@
+get:
+  summary: List all sessions
+  operationId: list_sessions
+  description: List all sessions
+  tags:
+    - Sessions
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  responses:
+    "200":
+      description: A paged array of session
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/session.yaml"
+
+post:
+  summary: Create a new session
+  operationId: create_session
+  description: Create an session
+  tags:
+    - Sessions
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  requestBody:
+    description: Session object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_session.yaml"
+  responses:
+    "201":
+      description: Session created
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/session.yaml"

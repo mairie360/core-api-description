@@ -1,17 +1,16 @@
 get:
-  summary: Retrieve
+  summary: Retrieve a module
   operationId: retrieve_module_by_id
   description: Retrieve a module by ID
   tags:
-    - modules
+    - Modules
   parameters:
     - $ref: "../parameters/path/module_id.yaml"
   responses:
-    '200':
+    "200":
       description: A module object
       content:
         application/json:
           schema:
             $ref: "../schemas/module.yaml"
-    default:
-      $ref: "../responses/unexpected_error.yaml"
+

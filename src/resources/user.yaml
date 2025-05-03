@@ -1,0 +1,50 @@
+get:
+  summary: Retrieve an user
+  operationId: retrieve_user_by_id
+  description: Retrieve an user by ID
+  tags:
+    - Users
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+  responses:
+    "200":
+      description: An user object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"
+
+put:
+  summary: Update an user
+  operationId: update_user_by_id
+  description: Update an user by ID
+  tags:
+    - Users
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+  requestBody:
+    description: User object that needs to be updated
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_user.yaml"
+  responses:
+    "200":
+      description: An user object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"
+
+delete:
+  summary: Delete an user
+  operationId: delete_user_by_id
+  description: Delete an user by ID
+  tags:
+    - Users
+  parameters:
+    - $ref: "../parameters/path/user_id.yaml"
+  responses:
+    "204":
+      description: No content

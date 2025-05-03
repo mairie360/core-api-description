@@ -1,4 +1,4 @@
-description: Unexpected error
+description: Bad request
 content:
   application/json:
     schema:

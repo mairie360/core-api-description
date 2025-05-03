@@ -1,0 +1,19 @@
+post:
+  summary: Create an new user
+  operationId: create_user
+  description: Create an user
+  tags:
+    - Users
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  requestBody:
+    description: User object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_user.yaml"
+  responses:
+    "201":
+      description: User created
