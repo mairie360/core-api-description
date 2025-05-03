@@ -1,0 +1,50 @@
+get:
+  summary: Retrieve a role
+  operationId: retrieve_role_by_id
+  description: Retrieve a role by ID
+  tags:
+    - Roles
+  parameters:
+    - $ref: "../parameters/path/role_id.yaml"
+  responses:
+    "200":
+      description: A role object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/role.yaml"
+
+put:
+  summary: Update a role
+  operationId: update_role_by_id
+  description: Update a role by ID
+  tags:
+    - Roles
+  parameters:
+    - $ref: "../parameters/path/role_id.yaml"
+  requestBody:
+    description: Role object that needs to be updated
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/update_role.yaml"
+  responses:
+    "200":
+      description: A role object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/role.yaml"
+
+delete:
+  summary: Delete a role
+  operationId: delete_role_by_id
+  description: Delete a role by ID
+  tags:
+    - Roles
+  parameters:
+    - $ref: "../parameters/path/role_id.yaml"
+  responses:
+    "204":
+      description: No content

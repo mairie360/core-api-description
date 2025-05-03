@@ -31,6 +31,10 @@ paths:
     $ref: "./resources/session.yaml"
   /users/{user_id}/password:
     $ref: "./resources/password.yaml"
+  /roles:
+    $ref: "./resources/roles.yaml"
+  /roles/{role_id}:
+    $ref: "./resources/role.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"

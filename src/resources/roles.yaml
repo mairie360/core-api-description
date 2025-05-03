@@ -1,0 +1,39 @@
+get:
+  summary: List all roles
+  operationId: list_roles
+  description: List all roles
+  tags:
+    - Roles
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  responses:
+    "200":
+      description: A paged array of role
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/role.yaml"
+
+post:
+  summary: Create a new role
+  operationId: create_role
+  description: Create an role
+  tags:
+    - Roles
+  requestBody:
+    description: Role object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_role.yaml"
+  responses:
+    "201":
+      description: Role created
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/role.yaml"
