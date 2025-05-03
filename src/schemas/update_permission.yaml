@@ -1,12 +1,8 @@
 type: object
 required:
-  - id
   - name
   - description
 properties:
-  id:
-    type: integer
-    format: int32
   name:
     type: string
   description:

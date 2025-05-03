@@ -1,0 +1,50 @@
+get:
+  summary: Retrieve a permission
+  operationId: retrieve_permission_by_id
+  description: Retrieve a permission by ID
+  tags:
+    - Permissions
+  parameters:
+    - $ref: "../parameters/path/permission_id.yaml"
+  responses:
+    "200":
+      description: A permission object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/permission.yaml"
+
+put:
+  summary: Update a permission
+  operationId: update_permission_by_id
+  description: Update a permission by ID
+  tags:
+    - Permissions
+  parameters:
+    - $ref: "../parameters/path/permission_id.yaml"
+  requestBody:
+    description: Permission object that needs to be updated
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/update_permission.yaml"
+  responses:
+    "200":
+      description: A permission object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/permission.yaml"
+
+delete:
+  summary: Delete a permission
+  operationId: delete_permission_by_id
+  description: Delete a permission by ID
+  tags:
+    - Permissions
+  parameters:
+    - $ref: "../parameters/path/permission_id.yaml"
+  responses:
+    "204":
+      description: No content

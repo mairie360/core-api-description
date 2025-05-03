@@ -35,6 +35,10 @@ paths:
     $ref: "./resources/roles.yaml"
   /roles/{role_id}:
     $ref: "./resources/role.yaml"
+  /permissions:
+    $ref: "./resources/permissions.yaml"
+  /permissions/{permission_id}:
+    $ref: "./resources/permission.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"

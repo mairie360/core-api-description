@@ -1,0 +1,7 @@
+name: permission_id
+in: path
+required: true
+description: The permission ID
+schema:
+  type: integer
+  format: int32

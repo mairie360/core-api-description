@@ -1,0 +1,39 @@
+get:
+  summary: List all permissions
+  operationId: list_permissions
+  description: List all permissions
+  tags:
+    - Permissions
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  responses:
+    "200":
+      description: A paged array of permission
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/permission.yaml"
+
+post:
+  summary: Create a new permission
+  operationId: create_permission
+  description: Create an permission
+  tags:
+    - Permissions
+  requestBody:
+    description: Permission object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_permission.yaml"
+  responses:
+    "201":
+      description: Permission created
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/permission.yaml"
