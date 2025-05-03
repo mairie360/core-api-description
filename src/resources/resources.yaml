@@ -1,0 +1,39 @@
+get:
+  summary: List all resources
+  operationId: list_resources
+  description: List all resources
+  tags:
+    - Resources
+  parameters:
+    - $ref: "../parameters/query/limit.yaml"
+    - $ref: "../parameters/query/offset.yaml"
+  responses:
+    "200":
+      description: A paged array of resource
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/resource.yaml"
+
+post:
+  summary: Create a new resource
+  operationId: create_resource
+  description: Create an resource
+  tags:
+    - Resources
+  requestBody:
+    description: resource object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_resource.yaml"
+  responses:
+    "201":
+      description: resource created
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/resource.yaml"

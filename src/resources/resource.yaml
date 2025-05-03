@@ -1,0 +1,50 @@
+get:
+  summary: Retrieve a resource
+  operationId: retrieve_resource_by_id
+  description: Retrieve a resource by ID
+  tags:
+    - Resources
+  parameters:
+    - $ref: "../parameters/path/resource_id.yaml"
+  responses:
+    "200":
+      description: A resource object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/resource.yaml"
+
+put:
+  summary: Update a resource
+  operationId: update_resource_by_id
+  description: Update a resource by ID
+  tags:
+    - Resources
+  parameters:
+    - $ref: "../parameters/path/resource_id.yaml"
+  requestBody:
+    description: resource object that needs to be updated
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/update_resource.yaml"
+  responses:
+    "200":
+      description: A resource object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/resource.yaml"
+
+delete:
+  summary: Delete a resource
+  operationId: delete_resource_by_id
+  description: Delete a resource by ID
+  tags:
+    - Resources
+  parameters:
+    - $ref: "../parameters/path/resource_id.yaml"
+  responses:
+    "204":
+      description: No content

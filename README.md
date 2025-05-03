@@ -55,7 +55,7 @@ Opens a local server to view your documentation live.
 src/
     parameters/
         # Parameter definitions
-    ressources/
+    resources/
         # Resource definitions
     responses/
         # Response definitions
