@@ -25,10 +25,6 @@ paths:
     $ref: "./resources/users.yaml"
   /users/{user_id}:
     $ref: "./resources/user.yaml"
-  /users/{user_id}/roles:
-    $ref: "./resources/roles.yaml"
-  /users/{user_id}/roles/{role_id}:
-    $ref: "./resources/role.yaml"
   /sessions:
     $ref: "./resources/sessions.yaml"
   /sessions/{session_id}:
