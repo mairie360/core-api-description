@@ -17,3 +17,23 @@ get:
             items:
               $ref: "../schemas/module.yaml"
 
+post:
+  summary: Create a new module
+  operationId: create_module
+  description: Create an module
+  tags:
+    - Modules
+  requestBody:
+    description: Module object that needs to be added
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/create_module.yaml"
+  responses:
+    "201":
+      description: Module created
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"

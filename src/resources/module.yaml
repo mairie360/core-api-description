@@ -14,3 +14,37 @@ get:
           schema:
             $ref: "../schemas/module.yaml"
 
+put:
+  summary: Update a module
+  operationId: update_module_by_id
+  description: Update a module by ID
+  tags:
+    - Modules
+  parameters:
+    - $ref: "../parameters/path/module_id.yaml"
+  requestBody:
+    description: Module object that needs to be updated
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/update_module.yaml"
+  responses:
+    "200":
+      description: A module object
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"
+
+delete:
+  summary: Delete a module
+  operationId: delete_module_by_id
+  description: Delete a module by ID
+  tags:
+    - Modules
+  parameters:
+    - $ref: "../parameters/path/module_id.yaml"
+  responses:
+    "204":
+      description: No content
