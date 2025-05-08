@@ -15,4 +15,10 @@ post:
         schema:
           $ref: "../schemas/create_user.yaml"
   responses:
+    "201":
+      description: User created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/user.yaml"
     $ref: "../responses/create_responses.yaml"

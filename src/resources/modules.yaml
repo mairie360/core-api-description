@@ -8,6 +8,14 @@ get:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
   responses:
+    "200":
+      description: Module list retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/module.yaml"
     $ref: "../responses/list_responses.yaml"
 
 post:
@@ -24,4 +32,10 @@ post:
         schema:
           $ref: "../schemas/create_module.yaml"
   responses:
+    "201":
+      description: Module created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/module.yaml"
     $ref: "../responses/create_responses.yaml"

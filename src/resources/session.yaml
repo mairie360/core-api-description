@@ -8,6 +8,12 @@ get:
     - $ref: "../parameters/path/user_id.yaml"
     - $ref: "../parameters/path/session_id.yaml"
   responses:
+    "200":
+      description: Session retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/session.yaml"
     $ref: "../responses/retrieve_responses.yaml"
 
 delete:
@@ -20,6 +26,8 @@ delete:
     - $ref: "../parameters/path/user_id.yaml"
     - $ref: "../parameters/path/session_id.yaml"
   responses:
+    "204":
+      description: Session deleted successfully
     $ref: "../responses/delete_responses.yaml"
 
     

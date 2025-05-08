@@ -1,7 +1,3 @@
-"201":
-  $ref: "./created.yaml"
-"202":
-  $ref: "./accepted.yaml"
 "400":
   $ref: "./bad_request.yaml"
 "401":

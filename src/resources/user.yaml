@@ -7,6 +7,12 @@ get:
   parameters:
     - $ref: "../parameters/path/user_id.yaml"
   responses:
+    "200":
+      description: User retrieved successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/user.yaml"
     $ref: "../responses/retrieve_responses.yaml"
 
 put:
@@ -25,6 +31,12 @@ put:
         schema:
           $ref: ../schemas/update_user.yaml
   responses:
+    "200":
+      description: User updated successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/user.yaml"
     $ref: "../responses/update_responses.yaml"
 
 delete:
@@ -36,4 +48,6 @@ delete:
   parameters:
     - $ref: "../parameters/path/user_id.yaml"
   responses:
+    "204":
+      description: User deleted successfully
     $ref: "../responses/delete_responses.yaml"
