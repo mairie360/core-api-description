@@ -4,6 +4,10 @@ This repository contains the OpenAPI documentation for the Core API of Mairie360
 
 It uses [Redocly CLI](https://redocly.com/docs/cli/) to bundle, preview, and build the API documentation.
 
+# Use
+
+Go to the [Core API Description](https://mairie360.github.io/core-api-description) to view the live API documentation.
+
 ## Requirements
 
 - Node.js (>=18.x recommended)
