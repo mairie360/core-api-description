@@ -20,37 +20,37 @@ security:
   - jwt: []
 paths:
   /modules:
-    $ref: "./resources/modules.yaml"
+    $ref: ./resources/modules.yaml
   /modules/{module_id}:
-    $ref: "./resources/module.yaml"
+    $ref: ./resources/module.yaml
   /users:
-    $ref: "./resources/users.yaml"
+    $ref: ./resources/users.yaml
   /users/{user_id}:
-    $ref: "./resources/user.yaml"
+    $ref: ./resources/user.yaml
   /sessions:
-    $ref: "./resources/sessions.yaml"
+    $ref: ./resources/sessions.yaml
   /sessions/{session_id}:
-    $ref: "./resources/session.yaml"
+    $ref: ./resources/session.yaml
   /users/{user_id}/password:
-    $ref: "./resources/password.yaml"
+    $ref: ./resources/password.yaml
   /roles:
-    $ref: "./resources/roles.yaml"
+    $ref: ./resources/roles.yaml
   /roles/{role_id}:
-    $ref: "./resources/role.yaml"
+    $ref: ./resources/role.yaml
   /permissions:
-    $ref: "./resources/permissions.yaml"
+    $ref: ./resources/permissions.yaml
   /permissions/{permission_id}:
-    $ref: "./resources/permission.yaml"
+    $ref: ./resources/permission.yaml
   /resources:
-    $ref: "./resources/resources.yaml"
+    $ref: ./resources/resources.yaml
   /resources/{resource_id}:
-    $ref: "./resources/resource.yaml"
+    $ref: ./resources/resource.yaml
 components:
   parameters:
-    $ref: "./parameters/_index.yaml"
+    $ref: ./parameters/_index.yaml
   schemas:
-    $ref: "./schemas/_index.yaml"
+    $ref: ./schemas/_index.yaml
   responses:
-    $ref: "./responses/_index.yaml"
+    $ref: ./responses/_index.yaml
   securitySchemes:
-    $ref: "./security_schemes/_index.yaml"
+    $ref: ./security_schemes/_index.yaml

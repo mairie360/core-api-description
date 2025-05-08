@@ -1,6 +1,16 @@
 module_id:
-  $ref: './path/module_id.yaml'
+  $ref: path/module_id.yaml
+permission_id:
+  $ref: path/permission_id.yaml
+resource_id:
+  $ref: path/resource_id.yaml
+role_id:
+  $ref: path/role_id.yaml
+session_id:
+  $ref: path/session_id.yaml
+user_id:
+  $ref: path/user_id.yaml
 limit:
-  $ref: './query/limit.yaml'
+  $ref: query/limit.yaml
 offset:
-  $ref: './query/offset.yaml'
+  $ref: query/offset.yaml

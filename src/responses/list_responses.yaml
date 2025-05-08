@@ -1,10 +1,10 @@
-"200":
-  $ref: "./ok.yaml"
-"400":
-  $ref: "./bad_request.yaml"
-"401":
-  $ref: "./unauthorized.yaml"
-"403":
-  $ref: "./forbidden.yaml"
-"500":
-  $ref: "./internal_server_error.yaml"
+200:
+  $ref: ./ok.yaml
+400:
+  $ref: ./bad_request.yaml
+401:
+  $ref: ./unauthorized.yaml
+403:
+  $ref: ./forbidden.yaml
+500:
+  $ref: ./internal_server_error.yaml

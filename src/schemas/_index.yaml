@@ -1,4 +1,36 @@
-module:
-  $ref: "./module.yaml"
+create_module:
+  $ref: create_module.yaml
+create_permission:
+  $ref: create_permission.yaml
+create_resource:
+  $ref: create_resource.yaml
+create_role:
+  $ref: create_role.yaml
+create_session:
+  $ref: create_session.yaml
+create_user:
+  $ref: create_user.yaml
 error:
-  $ref: "./error.yaml"
+  $ref: error.yaml
+module:
+  $ref: module.yaml
+permission:
+  $ref: permission.yaml
+resource:
+  $ref: resource.yaml
+role:
+  $ref: role.yaml
+session:
+  $ref: session.yaml
+user:
+  $ref: user.yaml
+update_module:
+  $ref: update_module.yaml
+update_permission:
+  $ref: update_permission.yaml
+update_resource:
+  $ref: update_resource.yaml
+update_role:
+  $ref: update_role.yaml
+update_user:
+  $ref: update_user.yaml

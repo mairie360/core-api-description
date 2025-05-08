@@ -7,18 +7,18 @@ get:
   security: 
     - jwt: []
   parameters:
-    - $ref: "../parameters/query/limit.yaml"
-    - $ref: "../parameters/query/offset.yaml"
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
   responses:
-    "200":
+    200:
       description: Resource list retrieved successfully
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "../schemas/resource.yaml"
-    $ref: "../responses/list_responses.yaml"
+              $ref: ../schemas/resource.yaml
+    $ref: ../responses/list_responses.yaml
 
 post:
   summary: Create a new resource
@@ -34,12 +34,12 @@ post:
     content:
       application/json:
         schema:
-          $ref: "../schemas/create_resource.yaml"
+          $ref: ../schemas/create_resource.yaml
   responses:
-    "201":
+    201:
       description: Resource created successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/resource.yaml"
-    $ref: "../responses/create_responses.yaml"
+            $ref: ../schemas/resource.yaml
+    $ref: ../responses/create_responses.yaml

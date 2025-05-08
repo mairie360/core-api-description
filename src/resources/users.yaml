@@ -7,20 +7,20 @@ post:
   security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/query/limit.yaml"
-    - $ref: "../parameters/query/offset.yaml"
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
   requestBody:
     description: User object that needs to be added
     required: true
     content:
       application/json:
         schema:
-          $ref: "../schemas/create_user.yaml"
+          $ref: ../schemas/create_user.yaml
   responses:
-    "201":
+    201:
       description: User created successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/user.yaml"
-    $ref: "../responses/create_responses.yaml"
+            $ref: ../schemas/user.yaml
+    $ref: ../responses/create_responses.yaml

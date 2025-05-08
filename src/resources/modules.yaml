@@ -7,18 +7,18 @@ get:
   security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/query/limit.yaml"
-    - $ref: "../parameters/query/offset.yaml"
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
   responses:
-    "200":
+    200:
       description: Module list retrieved successfully
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "../schemas/module.yaml"
-    $ref: "../responses/list_responses.yaml"
+              $ref: ../schemas/module.yaml
+    $ref: ../responses/list_responses.yaml
 
 post:
   summary: Create a new module
@@ -34,12 +34,12 @@ post:
     content:
       application/json:
         schema:
-          $ref: "../schemas/create_module.yaml"
+          $ref: ../schemas/create_module.yaml
   responses:
-    "201":
+    201:
       description: Module created successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/module.yaml"
-    $ref: "../responses/create_responses.yaml"
+            $ref: ../schemas/module.yaml
+    $ref: ../responses/create_responses.yaml

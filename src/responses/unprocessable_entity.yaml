@@ -2,4 +2,4 @@ description: Unprocessable entity
 content:
   application/json:
     schema:
-      $ref: "../schemas/error.yaml"
+      $ref: ../schemas/error.yaml

@@ -7,18 +7,18 @@ get:
   security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/query/limit.yaml"
-    - $ref: "../parameters/query/offset.yaml"
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
   responses:
-    "200":
+    200:
       description: A paged array of session
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "../schemas/session.yaml"
-    $ref: "../responses/list_responses.yaml"
+              $ref: ../schemas/session.yaml
+    $ref: ../responses/list_responses.yaml
 
 post:
   summary: Create a new session
@@ -34,12 +34,12 @@ post:
     content:
       application/json:
         schema:
-          $ref: "../schemas/create_session.yaml"
+          $ref: ../schemas/create_session.yaml
   responses:
-    "201":
+    201:
       description: Session created successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/session.yaml"
-    $ref: "../responses/create_responses.yaml"
+            $ref: ../schemas/session.yaml
+    $ref: ../responses/create_responses.yaml

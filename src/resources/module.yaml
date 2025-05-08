@@ -4,18 +4,18 @@ get:
   description: Retrieve a module by ID
   tags:
     - Modules
-  security: 
+  security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/module_id.yaml"
+    - $ref: ../parameters/path/module_id.yaml
   responses:
-    "200":
+    200:
       description: Module retrieved successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/module.yaml"
-    $ref: "../responses/retrieve_responses.yaml"
+            $ref: ../schemas/module.yaml
+    $ref: ../responses/retrieve_responses.yaml
 
 put:
   summary: Update a module
@@ -26,22 +26,22 @@ put:
   security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/module_id.yaml"
+    - $ref: ../parameters/path/module_id.yaml
   requestBody:
     description: Module object that needs to be updated
     required: true
     content:
       application/json:
         schema:
-          $ref: "../schemas/update_module.yaml"
+          $ref: ../schemas/update_module.yaml
   responses:
-    "200":
+    200:
       description: Module updated successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/module.yaml"
-    $ref: "../responses/update_responses.yaml"
+            $ref: ../schemas/module.yaml
+    $ref: ../responses/update_responses.yaml
 
 delete:
   summary: Delete a module
@@ -52,8 +52,8 @@ delete:
   security:
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/module_id.yaml"
+    - $ref: ../parameters/path/module_id.yaml
   responses:
-    "204":
+    204:
       description: Module deleted successfully
-    $ref: "../responses/delete_responses.yaml"
+    $ref: ../responses/delete_responses.yaml

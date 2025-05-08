@@ -1,2 +1,2 @@
 jwt:
-  $ref: "./jwt.yaml"
+  $ref: ./jwt.yaml

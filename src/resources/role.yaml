@@ -7,15 +7,15 @@ get:
   security: 
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/role_id.yaml"
+    - $ref: ../parameters/path/role_id.yaml
   responses:
-    "200":
+    200:
       description: Role retrieved successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/role.yaml"
-    $ref: "../responses/retrieve_responses.yaml"
+            $ref: ../schemas/role.yaml
+    $ref: ../responses/retrieve_responses.yaml
 
 put:
   summary: Update a role
@@ -26,22 +26,22 @@ put:
   security: 
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/role_id.yaml"
+    - $ref: ../parameters/path/role_id.yaml
   requestBody:
     description: Role object that needs to be updated
     required: true
     content:
       application/json:
         schema:
-          $ref: "../schemas/update_role.yaml"
+          $ref: ../schemas/update_role.yaml
   responses:
-    "200":
+    200:
       description: Role updated successfully
       content:
         application/json:
           schema:
-            $ref: "../schemas/role.yaml"
-    $ref: "../responses/update_responses.yaml"
+            $ref: ../schemas/role.yaml
+    $ref: ../responses/update_responses.yaml
 
 delete:
   summary: Delete a role
@@ -52,8 +52,8 @@ delete:
   security: 
     - jwt: []
   parameters:
-    - $ref: "../parameters/path/role_id.yaml"
+    - $ref: ../parameters/path/role_id.yaml
   responses:
-    "204":
+    204:
       description: Role deleted successfully
-    $ref: "../responses/delete_responses.yaml"
+    $ref: ../responses/delete_responses.yaml
