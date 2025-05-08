@@ -4,6 +4,8 @@ get:
   description: List all permissions
   tags:
     - Permissions
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
@@ -24,6 +26,8 @@ post:
   description: Create an permission
   tags:
     - Permissions
+  security:
+    - jwt: []
   requestBody:
     description: Permission object that needs to be added
     required: true

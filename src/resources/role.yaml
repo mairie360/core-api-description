@@ -4,6 +4,8 @@ get:
   description: Retrieve a role by ID
   tags:
     - Roles
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/role_id.yaml"
   responses:
@@ -21,6 +23,8 @@ put:
   description: Update a role by ID
   tags:
     - Roles
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/role_id.yaml"
   requestBody:
@@ -45,6 +49,8 @@ delete:
   description: Delete a role by ID
   tags:
     - Roles
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/role_id.yaml"
   responses:

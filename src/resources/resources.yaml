@@ -4,6 +4,8 @@ get:
   description: List all resources
   tags:
     - Resources
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
@@ -24,6 +26,8 @@ post:
   description: Create an resource
   tags:
     - Resources
+  security:
+    - jwt: []
   requestBody:
     description: resource object that needs to be added
     required: true

@@ -1,11 +1,6 @@
-# path
 module_id:
   $ref: './path/module_id.yaml'
-
-# limit
 limit:
   $ref: './query/limit.yaml'
-
-# offset
 offset:
   $ref: './query/offset.yaml'

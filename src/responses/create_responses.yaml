@@ -1,3 +1,5 @@
+"201":
+  $ref: "./created.yaml"
 "400":
   $ref: "./bad_request.yaml"
 "401":

@@ -16,6 +16,8 @@ servers:
 tags:
   - name: Modules
     description: Module operations
+security: 
+  - jwt: []
 paths:
   /modules:
     $ref: "./resources/modules.yaml"
@@ -50,3 +52,5 @@ components:
     $ref: "./schemas/_index.yaml"
   responses:
     $ref: "./responses/_index.yaml"
+  securitySchemes:
+    $ref: "./security_schemes/_index.yaml"

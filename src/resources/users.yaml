@@ -4,6 +4,8 @@ post:
   description: Create an user
   tags:
     - Users
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"

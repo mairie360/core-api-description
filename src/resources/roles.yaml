@@ -4,6 +4,8 @@ get:
   description: List all roles
   tags:
     - Roles
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
@@ -24,6 +26,8 @@ post:
   description: Create an role
   tags:
     - Roles
+  security: 
+    - jwt: []
   requestBody:
     description: Role object that needs to be added
     required: true

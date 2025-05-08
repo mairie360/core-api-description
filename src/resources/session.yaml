@@ -4,8 +4,9 @@ get:
   description: Retrieve an session by ID
   tags:
     - Sessions
+  security:
+    - jwt: []
   parameters:
-    - $ref: "../parameters/path/user_id.yaml"
     - $ref: "../parameters/path/session_id.yaml"
   responses:
     "200":
@@ -22,8 +23,9 @@ delete:
   description: Delete an session by ID
   tags:
     - Sessions
+  security:
+    - jwt: []
   parameters:
-    - $ref: "../parameters/path/user_id.yaml"
     - $ref: "../parameters/path/session_id.yaml"
   responses:
     "204":

@@ -4,6 +4,8 @@ get:
   description: Retrieve an user by ID
   tags:
     - Users
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/user_id.yaml"
   responses:
@@ -21,6 +23,8 @@ put:
   description: Update an user by ID
   tags:
     - Users
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/user_id.yaml"
   requestBody:
@@ -45,6 +49,8 @@ delete:
   description: Delete an user by ID
   tags:
     - Users
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/user_id.yaml"
   responses:

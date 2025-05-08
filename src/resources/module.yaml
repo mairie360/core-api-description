@@ -4,6 +4,8 @@ get:
   description: Retrieve a module by ID
   tags:
     - Modules
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/module_id.yaml"
   responses:
@@ -21,6 +23,8 @@ put:
   description: Update a module by ID
   tags:
     - Modules
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/module_id.yaml"
   requestBody:
@@ -45,6 +49,8 @@ delete:
   description: Delete a module by ID
   tags:
     - Modules
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/module_id.yaml"
   responses:

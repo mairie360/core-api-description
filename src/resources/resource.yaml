@@ -4,6 +4,8 @@ get:
   description: Retrieve a resource by ID
   tags:
     - Resources
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/resource_id.yaml"
   responses:
@@ -21,6 +23,8 @@ put:
   description: Update a resource by ID
   tags:
     - Resources
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/resource_id.yaml"
   requestBody:
@@ -43,6 +47,8 @@ delete:
   summary: Delete a resource
   operationId: delete_resource_by_id
   description: Delete a resource by ID
+  security: 
+    - jwt: []
   tags:
     - Resources
   parameters:

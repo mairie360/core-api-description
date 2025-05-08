@@ -4,6 +4,8 @@ get:
   description: Retrieve a permission by ID
   tags:
     - Permissions
+  security: 
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/permission_id.yaml"
   responses:
@@ -21,6 +23,8 @@ put:
   description: Update a permission by ID
   tags:
     - Permissions
+  security:
+    - jwt: []
   parameters:
     - $ref: "../parameters/path/permission_id.yaml"
   requestBody:
@@ -43,6 +47,8 @@ delete:
   summary: Delete a permission
   operationId: delete_permission_by_id
   description: Delete a permission by ID
+  security:
+    - jwt: []
   tags:
     - Permissions
   parameters:
