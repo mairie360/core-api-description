@@ -6,7 +6,8 @@
   "scripts": {
     "build": "redocly bundle src/openapi.yaml --output build/openapi.yaml",
     "build-docs": "npm run build && redocly build-docs build/openapi.yaml --output build/index.html",
-    "preview": "npm run build && redocly preview-docs build/openapi.yaml"
+    "preview": "npm run build && redocly preview-docs build/openapi.yaml",
+    "lint": "redocly lint src/openapi.yaml"
   },
   "repository": {
     "type": "git",
