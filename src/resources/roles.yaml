@@ -8,14 +8,7 @@ get:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
   responses:
-    "200":
-      description: A paged array of role
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: "../schemas/role.yaml"
+    $ref: "../responses/list_responses.yaml"
 
 post:
   summary: Create a new role
@@ -31,9 +24,4 @@ post:
         schema:
           $ref: "../schemas/create_role.yaml"
   responses:
-    "201":
-      description: Role created
-      content:
-        application/json:
-          schema:
-            $ref: "../schemas/role.yaml"
+    $ref: "../responses/create_responses.yaml"

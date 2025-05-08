@@ -15,5 +15,4 @@ post:
         schema:
           $ref: "../schemas/create_user.yaml"
   responses:
-    "201":
-      description: User created
+    $ref: "../responses/create_responses.yaml"

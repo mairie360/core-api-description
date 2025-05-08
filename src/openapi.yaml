@@ -7,7 +7,7 @@ info:
     name: Clément Antoine XAVIER
     url: https://github.com/marie360/core-api-description
     email: clement-antoine.xavier@epitech.eu
-  license: 
+  license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
 servers:

@@ -8,14 +8,7 @@ get:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
   responses:
-    "200":
-      description: A paged array of module
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: "../schemas/module.yaml"
+    $ref: "../responses/list_responses.yaml"
 
 post:
   summary: Create a new module
@@ -31,9 +24,4 @@ post:
         schema:
           $ref: "../schemas/create_module.yaml"
   responses:
-    "201":
-      description: Module created
-      content:
-        application/json:
-          schema:
-            $ref: "../schemas/module.yaml"
+    $ref: "../responses/create_responses.yaml"

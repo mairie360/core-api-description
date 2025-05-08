@@ -1,4 +1,4 @@
-description: Bad request
+description: Access forbidden
 content:
   application/json:
     schema:

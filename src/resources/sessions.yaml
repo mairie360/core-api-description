@@ -35,9 +35,4 @@ post:
         schema:
           $ref: "../schemas/create_session.yaml"
   responses:
-    "201":
-      description: Session created
-      content:
-        application/json:
-          schema:
-            $ref: "../schemas/session.yaml"
+    $ref: "../responses/create_responses.yaml"

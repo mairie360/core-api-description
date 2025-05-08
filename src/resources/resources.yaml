@@ -8,14 +8,7 @@ get:
     - $ref: "../parameters/query/limit.yaml"
     - $ref: "../parameters/query/offset.yaml"
   responses:
-    "200":
-      description: A paged array of resource
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: "../schemas/resource.yaml"
+    $ref: "../responses/list_responses.yaml"
 
 post:
   summary: Create a new resource
@@ -31,9 +24,4 @@ post:
         schema:
           $ref: "../schemas/create_resource.yaml"
   responses:
-    "201":
-      description: resource created
-      content:
-        application/json:
-          schema:
-            $ref: "../schemas/resource.yaml"
+    $ref: "../responses/create_responses.yaml"
