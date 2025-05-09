@@ -25,29 +25,3 @@ get:
       $ref: ../responses/not_found.yaml
     500:
       $ref: ../responses/internal_server_error.yaml
-
-delete:
-  summary: Delete a session
-  operationId: delete_session_by_id
-  description: Delete an session by ID
-  tags:
-    - Sessions
-  security:
-    - jwt: []
-  parameters:
-    - $ref: ../parameters/path/session_id.yaml
-  responses:
-    204:
-      description: Session deleted successfully
-    400:
-      $ref: ../responses/bad_request.yaml
-    401:
-      $ref: ../responses/unauthorized.yaml
-    403:
-      $ref: ../responses/forbidden.yaml
-    404:
-      $ref: ../responses/not_found.yaml
-    409:
-      $ref: ../responses/conflict.yaml
-    500:
-      $ref: ../responses/internal_server_error.yaml
