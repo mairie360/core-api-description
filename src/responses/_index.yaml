@@ -1,20 +1,14 @@
-200:
-  $ref: ./ok.yaml
-201:
-  $ref: ./created.yaml
-204:
-  $ref: ./no_content.yaml
 400:
-  $ref: ./bad_request.yaml
+  $ref: ../responses/bad_request.yaml
 401:
-  $ref: ./unauthorized.yaml
+  $ref: ../responses/unauthorized.yaml
 403:
-  $ref: ./forbidden.yaml
+  $ref: ../responses/forbidden.yaml
 404:
-  $ref: ./not_found.yaml
+  $ref: ../responses/not_found.yaml
 409:
-  $ref: ./conflict.yaml
+  $ref: ../responses/conflict.yaml
 422:
-  $ref: ./unprocessable_entity.yaml
+  $ref: ../responses/unprocessable_entity.yaml
 500:
-  $ref: ./internal_server_error.yaml
+  $ref: ../responses/internal_server_error.yaml
