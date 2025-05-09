@@ -25,6 +25,12 @@ npm install
 
 ## Usage
 
+### Lint the OpenAPI file
+
+```bash
+npm run lint
+```
+
 ### Build the bundled OpenAPI file
 
 ```bash
@@ -65,6 +71,8 @@ src/
         # Response definitions
     schemas/
         # Schema definitions
+    security_schemes/
+        # Security scheme definitions
     openapi.yaml   # Main OpenAPI file
 build/
   openapi.yaml   # Bundled OpenAPI file
