@@ -1,3 +1,32 @@
+get:
+  summary: List all users
+  operationId: list_users
+  description: List all users
+  tags:
+    - Users
+  security:
+    - jwt: []
+  parameters:
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
+  responses:
+    200:
+      description: A paged array of user
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../schemas/user.yaml
+    400:
+      $ref: ../responses/bad_request.yaml
+    401:
+      $ref: ../responses/unauthorized.yaml
+    403:
+      $ref: ../responses/forbidden.yaml
+    500:
+      $ref: ../responses/internal_server_error.yaml
+
 post:
   summary: Create an new user
   operationId: create_user
