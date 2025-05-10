@@ -5,7 +5,7 @@ delete:
   security: 
     - jwt: []
   tags:
-    - User Permissions
+    - Role Permissions
   parameters:
     - $ref: ../parameters/path/role_id.yaml
     - $ref: ../parameters/path/permission_id.yaml
