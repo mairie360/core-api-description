@@ -32,7 +32,7 @@ paths:
   /sessions/{session_id}:
     $ref: ./resources/session.yaml
   /users/{user_id}/password:
-    $ref: ./resources/password.yaml
+    $ref: ./resources/user_password.yaml
   /roles:
     $ref: ./resources/roles.yaml
   /roles/{role_id}:
