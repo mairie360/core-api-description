@@ -1,0 +1,57 @@
+get:
+  summary: List all role permissions
+  operationId: list_role_permissions
+  description: List all role permissions
+  tags:
+    - Role Permissions
+  security:
+    - jwt: []
+  parameters:
+    - $ref: ../parameters/path/role_id.yaml
+    - $ref: ../parameters/query/limit.yaml
+    - $ref: ../parameters/query/offset.yaml
+  responses:
+    200:
+      description: Role permission list retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../schemas/permission.yaml
+    400:
+      $ref: ../responses/bad_request.yaml
+    401:
+      $ref: ../responses/unauthorized.yaml
+    403:
+      $ref: ../responses/forbidden.yaml
+    500:
+      $ref: ../responses/internal_server_error.yaml
+
+post:
+  summary: Assign a permission to a role
+  operationId: assign_permission_to_role
+  description: Assign a permission to a role
+  tags:
+    - Role Permissions
+  security:
+    - jwt: []
+  parameters:
+    - $ref: ../parameters/path/role_id.yaml
+  responses:
+    204:
+      description: Permission assigned successfully
+    400:
+      $ref: ../responses/bad_request.yaml
+    401:
+      $ref: ../responses/unauthorized.yaml
+    403:
+      $ref: ../responses/forbidden.yaml
+    404:
+      $ref: ../responses/not_found.yaml
+    409:
+      $ref: ../responses/conflict.yaml
+    422:
+      $ref: ../responses/unprocessable_entity.yaml
+    500:
+      $ref: ../responses/internal_server_error.yaml

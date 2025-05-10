@@ -41,6 +41,10 @@ paths:
     $ref: ./resources/roles.yaml
   /roles/{role_id}:
     $ref: ./resources/role.yaml
+  /roles/{role_id}/permissions:
+    $ref: ./resources/role_permissions.yaml
+  /roles/{role_id}/permissions/{permission_id}:
+    $ref: ./resources/role_permission.yaml
   /permissions:
     $ref: ./resources/permissions.yaml
   /permissions/{permission_id}:
